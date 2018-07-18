@@ -1,4 +1,4 @@
-# musicback
+# music
 
 > 小米购物商场后台
 
@@ -17,3 +17,5 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+
+
