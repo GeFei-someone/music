@@ -7,7 +7,6 @@ import syst from 'components/system/system';
 Vue.use(Router)
 
 export default new Router({
-	mode: 'history',
 	routes: [
 	    {
 			path: '/',

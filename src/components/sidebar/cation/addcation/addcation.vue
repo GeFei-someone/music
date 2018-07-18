@@ -92,7 +92,7 @@
 							edition: _this.form.edition,
 							region: _this.region
 						});
-				_this.$ajax.post('/ai/millet/addcation.php',data).then( (res) => {
+				_this.$ajax.post('/ai/addcation.php',data).then( (res) => {
 					console.log(res)
 							if(res.data == 1){
 								_this.$message({

@@ -67,7 +67,7 @@ export default {
 		Bus.$on('menuid',(num) => {
 			_this.menuid = num;
 		})
-		this.$ajax.get('/ai/millet/parantselect.php').then( (res)=> {
+		this.$ajax.get('/ai/parantselect.php').then( (res)=> {
 			_this.parantlist = res.data.coluse;
 		})
 	},
@@ -80,7 +80,7 @@ export default {
 				this.fileList = [];
 				this.parannum = null;
 				//删除文件
-				this.$ajax.get("/ai/millet/upload.php",
+				this.$ajax.get("/ai/upload.php",
 				{
 					params: {
 						upload: _this.upload,
@@ -103,7 +103,7 @@ export default {
 		upimgRemove() {		//删除文件
 			let _this = this;
 			this.upload = true;
-			this.$ajax.get("/ai/millet/upload.php",
+			this.$ajax.get("/ai/upload.php",
 			{
 				params: {
 					upload: _this.upload,
@@ -121,7 +121,7 @@ export default {
 				_this.$refs[formName].validate((valid) => {
 					if(valid){
 						
-						_this.$ajax.get("/ai/millet/insertmenu.php",
+						_this.$ajax.get("/ai/insertmenu.php",
 						{
 							params: {
 								gomenu: _this.gomenu,
@@ -162,7 +162,7 @@ export default {
 				this.dialotrue = false;
 				this.parannum = null;
 				this.upload = true
-				this.$ajax.get("/ai/millet/upload.php",
+				this.$ajax.get("/ai/upload.php",
 				{
 					params: {
 						upload: _this.upload,

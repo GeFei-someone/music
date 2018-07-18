@@ -1,8 +1,8 @@
 <template>
  	<el-aside :style="{height: cloentHeight+'px', 'width' : !iscoll ? '200px': '67px'} " class="header_list">
 			<div class="header_top">
-	  			<img src="../../assets/logo.png" alt="">
-	  			<b>水果商场</b>
+	  			<img :src="logo" alt="">
+	  			<b>小米后台</b>
 	  		</div>
 	  		<div class="menu">
 		  		<div class="menu_title">
@@ -21,7 +21,8 @@
 		data() {
 			return {
 				iscoll: false,
-				cloentHeight: ""
+				cloentHeight: "",
+				logo: "http://www.gefei.club/music/static/img/logo.png"
 			}
 		},
 		props: ['titlefid'],
@@ -94,6 +95,6 @@
 						width: 20px;
 						height: 20px;
 						margin: 0 auto;
-						background: url('../../assets/menu.png') no-repeat;
+						background: url('../../../static/img/menu.png') no-repeat;
 						background-size: 100%;
 </style>

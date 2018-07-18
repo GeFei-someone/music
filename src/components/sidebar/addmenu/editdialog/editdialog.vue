@@ -125,7 +125,7 @@ export default {
 		Bus.$on('psonid',(psoid) => {
 			this.psoid = psoid;
 		});
-		this.$ajax.get('/ai/millet/parantselect.php').then( (res)=> {
+		this.$ajax.get('/ai/parantselect.php').then( (res)=> {
 			_this.parantlist = res.data.coluse;
 		});
 
@@ -138,7 +138,7 @@ export default {
 				done();
 				this.fileList = [];
 				//删除上传文件
-				this.$ajax.get("/ai/millet/upload.php",
+				this.$ajax.get("/ai/upload.php",
 				{
 					params: {
 						upload: _this.upload,
@@ -165,7 +165,7 @@ export default {
 			_this.$refs[formName].validate((valid) => {
 				if(valid){
 					
-					_this.$ajax.get("/millet/updatason.php",
+					_this.$ajax.get("/ai/updatason.php",
 					{
 						params: {
 							gomenu: _this.gomenu,
@@ -203,7 +203,7 @@ export default {
 			_this.$refs[formName].validate((valid) => {
 				if(valid){
 					
-					_this.$ajax.get("/ai/millet/updatamenu.php",
+					_this.$ajax.get("/ai/updatamenu.php",
 					{
 						params: {
 							gomenu: _this.gomenu,
@@ -244,7 +244,7 @@ export default {
 			_this.$refs[formName].validate((valid) => {
 				if(valid){
 					
-					_this.$ajax.get("/ai/millet/updatapson.php",
+					_this.$ajax.get("/ai/updatapson.php",
 					{
 						params: {
 							gomenu: _this.gomenu,
@@ -283,7 +283,7 @@ export default {
 		upimgRemove() {		//删除文件
 			let _this = this;
 			this.upload = true;
-			this.$ajax.get("/ai/millet/upload.php",
+			this.$ajax.get("/ai/upload.php",
 			{
 				params: {
 					upload: _this.upload,
@@ -301,7 +301,7 @@ export default {
 			_this.upload = true;
 			if(formName.indexOf(formName) != -1){
 				this.upload = true
-				this.$ajax.get("/ai/millet/upload.php",
+				this.$ajax.get("/ai/upload.php",
 				{
 					params: {
 						upload: _this.upload,

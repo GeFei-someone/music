@@ -104,7 +104,7 @@ export default {
 	mounted() {
 		let _this = this;
 				//获取栏目
-		_this.$ajax.get("/ai/millet/parantselect.php").then((res) => {
+		_this.$ajax.get("/ai/parantselect.php").then((res) => {
 			_this.menulicontentall = res.data.coluse
 			for(let i = 0; i < res.data.coluse.length; i++){
 				if(res.data.coluse[i].coluMenu){
@@ -173,7 +173,7 @@ export default {
 			if(this.activeindex){
 				console.log(2)
 				let sondata = 1;
-				this.$ajax.get('/ai/millet/delmenu.php',
+				this.$ajax.get('/ai/delmenu.php',
 					{
 						params: {
 							gomenu: _this.gomenu,
@@ -192,7 +192,7 @@ export default {
 
 			}else if(this.sonactiveindex){
 				let sondata = 3;
-				this.$ajax.get('/ai/millet/delmenu.php',
+				this.$ajax.get('/ai/delmenu.php',
 						{
 							params: {
 								gomenu: _this.gomenu,
@@ -210,7 +210,7 @@ export default {
 				})
 			}else{
 				let sondata = 0;
-				this.$ajax.get('/ai/millet/delmenu.php',
+				this.$ajax.get('/ai/delmenu.php',
 						{
 							params: {
 								gomenu: _this.gomenu,

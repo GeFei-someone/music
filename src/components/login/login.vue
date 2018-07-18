@@ -72,7 +72,7 @@
 					})
 					// this.open('登陆成功');
 					_this.$ajax.post(
-						'/ai/millet/selectuser.php',
+						'/ai/selectuser.php',
 						datanum,
 						{ headers:{'Content-Type':'application/x-www-form-urlencoded'} }
 					).then((res) => {
@@ -166,7 +166,7 @@
 	.login{
 		width: 100%;
 		height: 100%;
-		background: url(../../assets/loginimg.jpg) top  no-repeat;
+		background: url(../../../static/img/loginimg.jpg) top  no-repeat;
 		background-size: 100% 100%;
 		position: fixed;
 		top: 0;
@@ -194,7 +194,7 @@
 		border: 2px solid rgba(255,255,255,.5);
 		border-radius: 12px;
 		margin-top: 30px;
-		background: url(../../assets/loginimg.jpg)   no-repeat;
+		background: url(../../../static/img/loginimg.jpg)   no-repeat;
 		background-position: 100%;
 	}
 	form{

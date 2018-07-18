@@ -7,14 +7,14 @@
 
 		<div class="palaces_list">
 			<el-table :data="palaceslist" style="width: 100%" v-loading="loading" @row-click="rowClick">
-				<el-table-column prop="id" label="id" width="180"></el-table-column>
-				<el-table-column prop="title" label="标题" width="180"></el-table-column>
-				<el-table-column prop="icourl" label="图标" width="180">
+				<el-table-column align="center" prop="id" label="id" width="180"></el-table-column>
+				<el-table-column align="center" prop="title" label="标题" width="180"></el-table-column>
+				<el-table-column align="center" prop="icourl" label="图标" width="180">
 					<template slot-scope="scope">
-						<img :src="scope.row.icourl" alt="" style="width:100px; height: 100px" >
+						<img :src="scope.row.icourl" alt="" style="width:100px; height: 100px;float: none" >
 					</template>
 				</el-table-column>
-				<el-table-column prop="cationid" label="父级" width="180"></el-table-column>
+				<el-table-column align="center" prop="cationid" label="父级" width="180"></el-table-column>
 			</el-table>
 		</div>
 		<el-dialog title="删除" :visible.sync="del" width="30%">
@@ -45,7 +45,7 @@
 			}
 		},
 		mounted() {
-			this.$ajax.get("/ai/millet/cation.php",{
+			this.$ajax.get("/ai/cation.php",{
 				params: {
 					gomenu: this.gomenu
 				}
@@ -71,7 +71,7 @@
 			},
 			deltrue() {
 				if(this.rowId != 0){
-					this.$ajax.get("/ai/millet/delpalaces.php",{
+					this.$ajax.get("/ai/delpalaces.php",{
 						params: {
 							gomenu: this.gomenu,
 							id: this.rowId,
@@ -98,7 +98,7 @@
 		watch: {
 			"cationlist": function(newval,oloval){
 				if(newval){
-					this.$ajax.get("/ai/millet/selepalaces.php").then( (res) => {
+					this.$ajax.get("/ai/selepalaces.php").then( (res) => {
 						if(res.data){
 							for(let i = 0; i < res.data.palaces.length; i++){
 								
@@ -118,7 +118,7 @@
 			"recaptrue": function(newval,oloval) {
 				if(newval){
 					let _this = this;
-					this.$ajax.get("/ai/millet/selepalaces.php").then( (res) => {
+					this.$ajax.get("/ai/selepalaces.php").then( (res) => {
 						if(res.data){
 							for(let i = 0; i < res.data.palaces.length; i++){
 								

@@ -44,7 +44,7 @@
 
 			_this.$ajax({
 				method: 'get',
-				url:"/ai/millet/parantselect.php"
+				url:"/ai/parantselect.php"
 			}).then( (res) => {
 				_this.menulistall = res.data.coluse;
 				_this.menulist = _this.menulistall[0];
@@ -98,10 +98,13 @@
 		width: 100%;
 		height: auto;
 	}
+	.el-menu--collapse{
+		width: 100%!important;
+	}
 	.menu_wrap{
 		width: 100%;
 		overflow: hidden;
-		background: #2f4050;
+		background: #2f4050!important;
 	}
 	.el-menu{
 		border-right: 0 none;
@@ -124,12 +127,12 @@
 		border-left: 3px solid transparent;
 	}
 	.el-menu-item:focus, .el-menu-item:hover{
-		border-left: 3px solid #4196e1;
-		background: #23303c;
-		color: #ffffff;
+		border-left: 3px solid #4196e1!important;
+		background: #23303c!important;
+		color: #ffffff!important;
 	}
 	.el-submenu__title:hover {
-	    background-color: #334a5f;
+	    background-color: #334a5f!important;
 	}
 	.el-menu--popup-right-start{
 		margin-left: 0;
@@ -157,9 +160,9 @@
 		transition: all .20s linear;
 	}
 	.adad{
-		background: #23303c;
-		color: #a7b1c2;
-		font-size: 12px;
+		background: #23303c!important;;
+		color: #a7b1c2!important;
+		font-size: 12px!important;;
 		text-align: left;
 	}
 	.home_go{

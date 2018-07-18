@@ -31,7 +31,7 @@
 		mounted() {
 			let _this = this;
 			//获取分类
-			this.$ajax.get('/ai/millet/cation.php',{
+			this.$ajax.get('/ai/cation.php',{
 				params: {
 					gomenu: this.gomenu
 				}

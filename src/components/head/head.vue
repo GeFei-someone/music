@@ -46,7 +46,7 @@
 		mounted(){
 			this.$ajax({
 				method: 'get',
-				url: '/ai/millet/parantselect.php/'
+				url: '/ai/parantselect.php/'
 			}).then((res) => {
 				// console.log(res)
 				for(let i = 0; i < res.data.coluse.length; i++ ){
@@ -74,7 +74,7 @@
 			selectidnum() {
 				var _this = this;
 				if(_this.$route.query.upid){
-					_this.$ajax.get('/ai/millet/selectupid.php',{
+					_this.$ajax.get('/ai/selectupid.php',{
 						params: {
 							ID:  _this.$route.query.upid
 						}
@@ -83,7 +83,7 @@
 						_this.userlist = res.data;
 					})
 				}else{
-					_this.$ajax.get('/ai/millet/selectupid.php',{
+					_this.$ajax.get('/ai/selectupid.php',{
 						params: {
 							ID:  _this.getCookie('upid')
 						}

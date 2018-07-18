@@ -11,18 +11,12 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        '/api': {
-            target: 'https://www.easy-mock.com/mock/5b29f2e9817c8f34b937e6e5/menu/menu#!method=get',//设置你调用的接口域名和端口号 别忘了加http
-            changeOrigin: true,
-            pathRewrite: {
-              '^/api': '/'//这里理解成用‘/api’代替target里面的地址，后面组件中我们掉接口时直接用api代替 比如我要调用'http://40.00.100.100:3002/user/add'，直接写‘/api/user/add’即可
-            }
-          },
         '/ai': {
-            target: 'http://www.gefei.club/',//设置你调用的接口域名和端口号 别忘了加http
+            target: 'http://www.gefei.club/ai',//设置你调用的接口域名和端口号 别忘了加http
             changeOrigin: true,
+            secure: false,
             pathRewrite: {
-              '^/ai': '/'//这里理解成用‘/api’代替target里面的地址，后面组件中我们掉接口时直接用api代替 比如我要调用'http://40.00.100.100:3002/user/add'，直接写‘/api/user/add’即可
+              '^/ai': ''//这里理解成用‘/api’代替target里面的地址，后面组件中我们掉接口时直接用api代替 比如我要调用'http://40.00.100.100:3002/user/add'，直接写‘/api/user/add’即可
             }
         }
     },

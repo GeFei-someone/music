@@ -58,7 +58,7 @@ export default {
 			this.menuid = num;
 			// console.log("sondialog"+this.menuid)
 		})
-		this.$ajax.get('/ai/millet/parantselect.php').then( (res)=> {
+		this.$ajax.get('/ai/parantselect.php').then( (res)=> {
 			_this.parantlist = res.data.coluse;
 		})
 
@@ -83,7 +83,7 @@ export default {
 				_this.$refs[formName].validate((valid) => {
 					if(valid){
 						
-						_this.$ajax.get("/ai/millet/insertsonmenu.php",
+						_this.$ajax.get("/ai/insertsonmenu.php",
 						{
 							params: {
 								parantid: _this.menuid,

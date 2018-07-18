@@ -67,7 +67,7 @@ export default {
 				_this.$refs[formName].validate((valid) => {
 					if(valid){
 						
-						_this.$ajax.get("/ai/millet/inserttomenu.php",
+						_this.$ajax.get("/ai/inserttomenu.php",
 						{
 							params: {
 								gomenu: _this.gomenu,

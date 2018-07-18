@@ -140,7 +140,7 @@
 			Bs.$on('id', (id) => {
 				_this.commid = id;
 			})
-			_this.$ajax.get("/ai/millet/selecomm.php").then( (res) => {
+			_this.$ajax.get("/ai/selecomm.php").then( (res) => {
 				_this.editcommlistall = res.data.comm;
 				for(let i = 0; i < _this.editcommlistall.length; i++){
 					let imgurlsplit = _this.editcommlistall[i].imgurl.slice(3,_this.editcommlistall[i].imgurl.length);
@@ -157,7 +157,7 @@
 				_this.edit = false;
 				_this.upload = true;
 				if(formName.indexOf(formName) != -1){
-					this.$ajax.get("/ai/millet/commupload.php",
+					this.$ajax.get("/ai/commupload.php",
 					{
 						params: {
 							upload: _this.upload,
@@ -179,7 +179,7 @@
 					this.fileList = [];
 					this.parannum = null;
 					//删除上传的文件
-					this.$ajax.get("/ai/millet/commupload.php",
+					this.$ajax.get("/ai/commupload.php",
 					{
 						params: {
 							upload: _this.upload,
@@ -201,7 +201,7 @@
 			upimgRemove() {		//删除文件
 				let _this = this;
 				this.upload = true;
-				this.$ajax.get("/ai/millet/commupload.php",
+				this.$ajax.get("/ai/commupload.php",
 				{
 					params: {
 						upload: _this.upload,
@@ -252,7 +252,7 @@
 							regionid: _this.form["region"],
 							briefshort: _this.form["briefshort"]
 						});
-				_this.$ajax.post('/ai/millet/editcomm.php',data).then( (res) => {
+				_this.$ajax.post('/ai/editcomm.php',data).then( (res) => {
 							if(res.data == 1){
 								_this.$message({
 									message: "编辑商品成功",
@@ -269,7 +269,7 @@
 		watch: {
 			commid: function(newval,oloval){
 				let _this = this;
-				this.$ajax.get('/ai/millet/selecomm.php').then( (res) => {
+				this.$ajax.get('/ai/selecomm.php').then( (res) => {
 					for(let i = 0; i < res.data.comm.length; i++){
 						if( res.data.comm[i].id == newval){
 							let list =  res.data.comm[i];
@@ -301,7 +301,7 @@
 								this.form.colorimg.push(colorimg[h]);
 							}
 							//获取分类
-							this.$ajax.get('/ai/millet/cation.php',{
+							this.$ajax.get('/ai/cation.php',{
 								params: {
 									gomenu: this.gomenu
 								}

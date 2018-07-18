@@ -92,7 +92,7 @@
 							edition: _this.form.edition,
 							region: _this.region
 						});
-				_this.$ajax.post('/ai/millet/editcation.php',data).then( (res) => {
+				_this.$ajax.post('/ai/editcation.php',data).then( (res) => {
 							if(res.data == 1){
 								_this.$message({
 									message: "添加商品成功",
@@ -109,7 +109,7 @@
 		watch: {
 			"id": function(newval,oloval) {
 				if(newval){
-					this.$ajax.get("/ai/millet/cation.php",{
+					this.$ajax.get("/ai/cation.php",{
 						params: {
 							gomenu: this.gomenu
 						}

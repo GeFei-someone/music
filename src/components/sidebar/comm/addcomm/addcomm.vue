@@ -137,7 +137,7 @@
 				_this.commpush = commpush;
 			})
 			//获取分类
-			this.$ajax.get('/ai/millet/cation.php',{
+			this.$ajax.get('/ai/cation.php',{
 				params: {
 					gomenu: _this.gomenu
 				}
@@ -155,7 +155,7 @@
 				_this.commpush = false;
 				_this.upload = true;
 				if(formName.indexOf(formName) != -1){
-					this.$ajax.get("/ai/millet/commupload.php",
+					this.$ajax.get("/ai/commupload.php",
 					{
 						params: {
 							upload: _this.upload,
@@ -183,7 +183,7 @@
 					this.fileList = [];
 					this.parannum = null;
 					//删除上传的文件
-					this.$ajax.get("/ai/millet/commupload.php",
+					this.$ajax.get("/ai/commupload.php",
 					{
 						params: {
 							upload: _this.upload,
@@ -207,7 +207,7 @@
 			upimgRemove() {		//删除文件
 				let _this = this;
 				this.upload = true;
-				this.$ajax.get("/ai/millet/commupload.php",
+				this.$ajax.get("/ai/commupload.php",
 				{
 					params: {
 						upload: _this.upload,
@@ -265,7 +265,7 @@
 							regionid: _this.form["region"],
 							briefshort: _this.form["briefshort"]
 						});
-				_this.$ajax.post('/ai/millet/addcomm.php',data).then( (res) => {
+				_this.$ajax.post('/ai/addcomm.php',data).then( (res) => {
 							if(res.data == 1){
 								_this.$message({
 									message: "添加商品成功",

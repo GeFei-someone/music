@@ -44,7 +44,7 @@
 			}
 		},
 		mounted(){
-			this.$ajax.get('/ai/millet/cation.php',{
+			this.$ajax.get('/ai/cation.php',{
 				params: {
 					gomenu: this.gomenu
 				}
@@ -78,7 +78,7 @@
 				this.disabled = false
 			},
 			delcation(){
-				this.$ajax.get('/ai/millet/delcation.php',{
+				this.$ajax.get('/ai/delcation.php',{
 					params: {
 						gomenu: this.gomenu,
 						switchId: this.switchId
@@ -98,7 +98,7 @@
 				if(newval){
 					this.loading = true
 					
-					this.$ajax.get('/ai/millet/cation.php',{
+					this.$ajax.get('/ai/cation.php',{
 						params: {
 							gomenu: this.gomenu
 						}

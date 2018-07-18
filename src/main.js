@@ -8,6 +8,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import axios from 'axios';
 
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+
 Vue.prototype.$ajax = axios;
 
 

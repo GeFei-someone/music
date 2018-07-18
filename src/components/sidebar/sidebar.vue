@@ -28,7 +28,7 @@ export default {
 		props: ['menulistid','componentax'],
 		mounted() {
 			var _this = this;
-			this.$ajax.get("/ai/millet/parantselect.php").then( (res) => {
+			this.$ajax.get("/ai/parantselect.php").then( (res) => {
 				this.colus = res.data.coluse;
 			})
 

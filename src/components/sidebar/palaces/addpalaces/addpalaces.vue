@@ -43,7 +43,7 @@
 				this.palaces = palaces
 			})
 
-			this.$ajax.get("/ai/millet/cation.php",{
+			this.$ajax.get("/ai/cation.php",{
 				params: {
 					gomenu: this.gomenu
 				}
@@ -74,7 +74,7 @@
 							cation: _this.form.cation
 						}
 					);
-				this.$ajax.post("/ai/millet/addpalaces.php",data).then( (res) => {
+				this.$ajax.post("/ai/addpalaces.php",data).then( (res) => {
 					console.log(res);
 					if(res.data == 1){
 							_this.$message({

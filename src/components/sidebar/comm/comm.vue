@@ -85,14 +85,14 @@
 		methods: {
 			data() {
 				let _this = this;
-				_this.$ajax.get("/ai/millet/cation.php",{
+				_this.$ajax.get("/ai/cation.php",{
 					params: {
 						gomenu: _this.gomenu
 					}
 				}).then( (res)=> {
 					_this.cationlist = res.data.cation;
 				})
-				_this.$ajax.get("/ai/millet/selecomm.php").then( (res)=> {
+				_this.$ajax.get("/ai/selecomm.php").then( (res)=> {
 					for(let i = 0; i < res.data.comm.length; i++){
 						for(let j = 0; j < _this.cationlist.length; j++){
 							if(res.data.comm[i].cationid == _this.cationlist[j].id){
@@ -148,7 +148,7 @@
 						imgall = parimgal.concat(uimg,cimgal);
 					}	
 				}
-				_this.$ajax.get("/ai/millet/delcomm.php",
+				_this.$ajax.get("/ai/delcomm.php",
 						{
 							params: {
 								gomenu: _this.gomenu,
@@ -174,12 +174,12 @@
 				if(newval){
 					this.loading = true
 					
-					this.$ajax.get('/ai/millet/selecomm.php',{
+					this.$ajax.get('/ai/selecomm.php',{
 						params: {
 							gomenu: this.gomenu
 						}
 					}).then( (res) => {
-						_this.$ajax.get("/ai/millet/cation.php",{
+						_this.$ajax.get("/ai/cation.php",{
 							params: {
 								gomenu: _this.gomenu
 							}
