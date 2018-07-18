@@ -34,4 +34,7 @@ npm run build --report
 
 技术：vue、vue-router、element、axios、webpack
 
+项目还在更新中。
+
+如果有什么问题请联系我QQ：836456907
 ```
